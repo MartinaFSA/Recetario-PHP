@@ -11,15 +11,15 @@
 
                 $news = "Gracias por suscribirte al newsletter!";
 
-                header("Refresh: 1; url = ../index.php"); 
+                //header("Refresh: 1; url = ../index.php"); 
 
             }else {
                 $news = "ERORR, inserte una dirección de mail válida";
 
-                header("Refresh: 1; url = ../index.php"); 
+                //header("Refresh: 1; url = ../index.php"); 
             }
         }
         
-        header("Refresh: 1; url = ../index.php"); 
+        //header("Refresh: 1; url = ../index.php"); 
     }
 ?>

@@ -5,13 +5,15 @@
         public $palabra2;
         public $tiempo_prep;
         public $tiempo_coccion;
+        public $imagenRecetaEscrita;
 
         //Establezco el atributo con una variable
-        public function __construct($palabra1, $palabra2, $tiempo_prep, $tiempo_coccion) {
+        public function __construct($palabra1, $palabra2, $tiempo_prep, $tiempo_coccion, $imagenRecetaEscrita) {
             $this -> palabra1 = $palabra1;
             $this -> palabra2 = $palabra2;
             $this -> tiempo_prep = $tiempo_prep;
             $this -> tiempo_coccion = $tiempo_coccion;
+            $this -> imagenRecetaEscrita = $imagenRecetaEscrita;
         }
     }
         /*public function crearRow() {
@@ -30,17 +32,17 @@
     
     
     //Modelo receta
-    $otra = new Receta ("Otra de", "Otra", "??? minutos", "? horas");
+    $otra = new Receta ("Otra de", "Otra", "??? minutos", "? horas", "recetaEscrita_papaRellena.jpg");
 
     //Sopa de cebolla francesa 
-    $sopaCebolla = new Receta ("Sopa de ", "Cebolla", "20 minutos", "2 horas");
+    $sopaCebolla = new Receta ("Sopa de ", "Cebolla", "20 minutos", "2 horas", "recetaEscrita_sopaCebolla.jpg");
 
     //Milanesa Maryland Suprema Maryland
-    $milanesaMaryland = new Receta ("Milanesa", "Maryland", "1 horas", " horas");
+    $milanesaMaryland = new Receta ("Milanesa", "Maryland", "1 horas", " horas", "recetaEscrita_milanesaMaryland.jpg");
 
     //Pionono Arrollado
-    $pionono = new Receta ("Pionono", "Masa Básica", "20 minutos", "10 minutos");
+    $pionono = new Receta ("Pionono", "Masa Básica", "20 minutos", "10 minutos", "recetaEscrita_pionono.jpg");
 
     //Papa Rellena
-    $papaRellena = new Receta ("Papa", "Rellena", "20 minutos", "2 horas");
+    $papaRellena = new Receta ("Papa", "Rellena", "20 minutos", "2 horas", "recetaEscrita_papaRellena.jpg");
 ?>

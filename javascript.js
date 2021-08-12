@@ -14,11 +14,13 @@ function openMenu() {
 //Search Box 
 const lupita = document.querySelector(".navBar__search--lupita");
 const inputBusqueda = document.querySelector(".navBar__search--input");
+const submitBusqueda = document.querySelector(".navBar__search--submit");
 const navBar__search = document.querySelector(".navBar__search");
 
 function mostrarSearch() {
     inputBusqueda.classList.toggle("active");
     navBar__search.classList.toggle("active");
+    submitBusqueda.classList.toggle("active");
 };
 
 //Modal inicie sesión

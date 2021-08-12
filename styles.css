@@ -242,36 +242,43 @@ header {
     padding-top: 15px;
 }
 
-.navBar__search button {
-    background: none;
-    border: none;
-
-    margin: 0%;
-}
-
 .navBar__search--lupita {
     width: 25px;
+    padding: 0px 5px;
+}
+
+.navBar__search--input, .navBar__search--submit {
+    display: none;
+    visibility: hidden;
 }
 
 .navBar__search--input {
-    width: 0px;
-    display: none;
+    width: 200px;
 }
 
-.navBar__search--input.active {
-    width: 250px;
+.navBar__search--submit {
+    width: 100px;
+    margin: 0%;
+}
+
+.navBar__search--input.active, .navBar__search--submit.active {
     display: inline-block;
+    visibility: visible;
 }
 
 .navBar__search.active {
     background-color: #fafafa;
 
-    width: 100%;
+    width: calc(100% - 2vw);
     margin: 0%;
 
     position: absolute;
+    justify-self: center;
+    align-self: center;
+    
     z-index: 5;
 }
+
 
 /*BÚSQUEDA DEL INDEX*/
 
@@ -1017,7 +1024,7 @@ ol li::marker {
 
 @media (max-width: 580px) {
     /*Navigation Bar*/
-    .navBar {
+    .navBar, .navBar__search.active {
         height: 50px;
     }
     
@@ -1112,7 +1119,7 @@ ol li::marker {
 
 @media (min-width: 580px) {
     /*Navigation Bar*/
-    .navBar {
+    .navBar, .navBar__search.active {
         height: 55px;
     }
     
@@ -1544,7 +1551,7 @@ ol li::marker {
 
 @media (min-width: 1024px) {
     /*Navigation Bar*/
-    .navBar {
+    .navBar, .navBar__search.active {
         height: 70px;
     }
     
@@ -1622,7 +1629,7 @@ ol li::marker {
 
 @media (min-width: 1700px) {
     /*Navigation Bar*/
-    .navBar {
+    .navBar, .navBar__search.active {
         height: 90px;
     }
     

@@ -24,26 +24,11 @@
         require_once ("componentes/header.php"); 
     ?>
     <main>
-        <!--BARRA DE BÚSQUEDA-->
-        <section id="ctn_searchSecc">
-            <div class="flexAndCenter">
-
-                <form action="busqueda.php" method="POST" id="searchSecc__form" class="col-auto">
-                    <input name="buscadorSearchSecc" type="text" id="searchSecc__form--input" placeholder="Buscar">
-                    <button name="buscadorSearchSecc__submit" id="searchSecc__form--button" type="submit">Buscar</button>    
-                </form>
-
-                <a href="enProceso.php" id="searchSecc_searchIngredient">
-                    Búsqueda por ingrediente
-                    <i class="fas fa-chevron-right fa-sm" style="background: transparent"></i>
-                </a>
-            </div>
-        </section>
 
         <!--SECCIÓN RECETAS-->
         <section id="encabezado_section">
             <div id="ctnEncabezado">
-                <h1>Recetas</h1>
+                <h1>Todas las recetas</h1>
             </div>
         </section>
 

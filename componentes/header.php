@@ -27,11 +27,14 @@
         </div>               
 
         <div class="navBar__search">
-            <button onclick="mostrarSearch()"><i class="fas fa-search navBar__search--lupita" style="color: #121212;"></i></button>
-            <input type="text" placeholder="Buscar" class="navBar__search--input">
+            <form action="busqueda.php" method="POST">
+                <span onclick="mostrarSearch()"><i class="fas fa-search navBar__search--lupita" style="color: #121212;"></i></span>
+                <input name="buscadorSearchSecc" type="text" placeholder="Buscar" class="navBar__search--input">
+                <input name="buscadorSearchSecc__submit" class="navBar__search--submit" type="submit" value="Buscar">
+            </form>
         </div>
-
     </nav>
+    
 </header>
 
 
