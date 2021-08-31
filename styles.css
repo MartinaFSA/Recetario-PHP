@@ -1,5 +1,4 @@
 /*GENERALES*/
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-    background-color: #fafafa;
+    background-color: var(--color-noBlanco);
 }
 
 main, .navBar {
@@ -29,7 +28,7 @@ button {
 }
 
 label {
-    font-family: 'Karla', sans-serif;
+    font-family: var(--font-family-general);
 }
 
 input:focus {
@@ -38,6 +37,40 @@ input:focus {
     box-shadow: 0 0 10px #616d5b9e;
 }
 
+.textoChico {
+    font-size: 1rem; 
+}
+  
+.textoMediano {
+    font-size: 1.2rem; 
+}
+  
+.textoGrande {
+    font-size: 1.3rem; 
+}
+  
+.textoTitulos {
+    font-size: 1.8rem; 
+}
+  
+
+/*Var*/
+:root {
+    --color-grisOscuro: #353535;
+    --color-grisOscuro-texto:#121212;
+    --color-noBlanco: #fafafa;
+    --color-verdeOscuro: rgb(64, 91, 72);
+    --color-verdeOscuro-bordes: #535e53;
+    --color-verdeOscuro-link: rgb(43, 67, 52);
+    --color-verdeClaro: #798f81;
+    --color-verdeClaro-hover: #616562;
+
+    --font-family-general: 'Karla', sans-serif;
+    --font-family-logo: 'Playfair Display', serif;
+    --font-family-generalSerif: 'Karma', serif;
+}
+
+/*Scrollbar*/
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -49,22 +82,22 @@ input:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(64, 91, 72);
-    border: 1px solid #fafafa;
+    background: var(--color-verdeOscuro);
+    border: 1px solid var(--color-noBlanco);
     border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: #798f81;
+    background: var(--color-verdeClaro);
 }
 
 ::-webkit-scrollbar-track {
-    background: #fafafa;
+    background: var(--color-noBlanco);
     border: none;
 }
 
 ::-webkit-scrollbar-track:active {
-    background: #fafafa;
+    background: var(--color-noBlanco);
 }
 
 ::-webkit-scrollbar-corner {
@@ -92,7 +125,7 @@ input:focus {
 }
 
 .modalPHP {
-    background-color: #353535;/* Fallback*/
+    background-color: var(--color-grisOscuro);/* Fallback*/
     background-color: #353535bb;
     border-radius: 5px 2px 5px 2px;
 
@@ -111,25 +144,25 @@ input:focus {
 }
 
 .modalPHP p {
-    color: #fafafa;
+    color: var(--color-noBlanco);
     text-align: center;
-    font: 16px 'Karla', sans-serif;
+    font-family: var(--font-family-general);
 }
 
 @-webkit-keyframes modalAparece {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
   
-  @keyframes modalAparece {
+@keyframes modalAparece {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
-  }
+}
 
 /*NAVIGATION BAR*/
 header {
-    background-color: #fcfcfc;
-    border-bottom: 1px solid #535e53
+    background-color: var(--color-noBlanco);
+    border-bottom: 1px solid var(--color-verdeOscuro-bordes)
 }
 
 .navBar {
@@ -145,8 +178,9 @@ header {
     justify-content: space-between;
 }
 
+/*menu*/
 .navBar__menu {
-    background-color: #fafafa;
+    background-color: var(--color-noBlanco);
     border-radius: 10px;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -168,27 +202,22 @@ header {
     left: 0;
 }
 
-.navBar__menu.unactive {
-    left: -200%;
-}
-
 .navBar__menu-item {
-    font-family: 'Karla', sans-serif;
+    font-family: var(--font-family-general);
     
     margin: 10px 10px;
 }
 
 .menu-item--link {
-    color: rgb(33, 35, 34);
-    font-size: calc(1em + 0.2vw);
+    color: var(--color-grisOscuro);
 }
 
 .menu-item--link:hover {
-    color: rgb(43, 67, 52);
+    color: var(--color-verdeOscuro-link);
 }
 
 #navBar__menu-divider {
-    border-bottom: 1px solid #798f81;
+    border-bottom: 1px solid var(--color-verdeClaro);
     opacity: 30%; 
     margin-bottom: 0%;
 }
@@ -196,13 +225,11 @@ header {
 .navBar__hamburger {
     cursor: pointer;
 
-    padding-top: 20px;
-
     display: block;
 }
 
 .hamburger--bar {
-    background-color: #121212;
+    background-color: var(--color-grisOscuro);
     border-radius: 25%;
     height: 3px;
     margin: 5px auto;
@@ -226,15 +253,17 @@ header {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+/*logo*/
 .navBar__logo {
-    color: #798f81;
-    font-family: 'Playfair Display', serif;
+    color: var(--color-verdeClaro);
+    font-family: var(--font-family-logo);
 }
 
 .navBar__logo:hover {
-    color: #798f81;
+    color: var(--color-verdeClaro);
 }
 
+/*search bar*/
 .navBar__search {
     text-align: right;
     background-color: transparent;
@@ -267,7 +296,7 @@ header {
 }
 
 .navBar__search.active {
-    background-color: #fafafa;
+    background-color: var(--color-noBlanco);
 
     width: calc(100% - 2vw);
     margin: 0%;
@@ -281,7 +310,6 @@ header {
 
 
 /*BÚSQUEDA DEL INDEX*/
-
 #ctn_searchSecc {
     background-image: url("imagenes/fondoBusquedaIndex.jpg");
     background-repeat: no-repeat;
@@ -289,10 +317,10 @@ header {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: center center;
 
-    font-family: 'Karma', serif;
+    font-family: var(--font-family-generalSerif);
     width: 100%;
-    min-height: 100vh;
     
     margin: 0%;
     padding: 0%;
@@ -312,15 +340,15 @@ header {
 }
 
 #searchSecc__form--input {
-    color: rgb(64, 91, 72);
+    color: var(--color-verdeOscuro);
     border-style: none;
 
     box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.08);
 }
 
 #searchSecc__form--button {
-    color: #fafafa;
-    background: rgb(64, 91, 72);
+    color: var(--color-noBlanco);
+    background: var(--color-verdeOscuro);
     font-weight: 400;
     text-align: center;
     border-style: none;
@@ -329,9 +357,7 @@ header {
 }
 
 #searchSecc_searchIngredient {
-    color: rgb(33, 35, 34);
-
-    font-size: calc(1em + 0.2vw);
+    color: var(--color-verdeOscuro-link);
     font-weight: 550;
 
     display: block;
@@ -351,9 +377,10 @@ header {
 }
 
 h1 {
-    color: rgb(33, 35, 34);
+    color: var(--color-grisOscuro);
     cursor: default;
-    font: bolder calc(1em + 1vw) 'Karma', serif; /*style, variant, weight, size, family*/
+    font-family: var(--font-family-generalSerif); /*style, variant, weight, size, family*/
+    font-weight: bold;
 
     float: left;
 }
@@ -363,9 +390,8 @@ h1 {
 }
 
 #encabezado_section__button {
-    background: #fafafa;
-    color: rgb(33, 35, 34);
-    font-size: calc(1em + 0.2vw);
+    background: var(--color-noBlanco);
+    color: var(--color-verdeOscuro-link);
     text-align: center;
 
     border-radius: 4px;
@@ -377,17 +403,17 @@ h1 {
 }
 
 #encabezado_section__button:hover {
-    border-color: rgb(64, 91, 72);
+    border-color: var(--color-verdeOscuro);
 }
 
 #encabezadoSection__button--link {
-    color: rgb(33, 35, 34);
-    font-family: 'Karma', serif;
+    color: var(--color-verdeOscuro-link);
+    font-family: var(--font-family-generalSerif);
     font-weight: 600;
 }
 
 #encabezadoSection__button--link:hover {
-    color: rgb(64, 91, 72);
+    color: var(--color-verdeOscuro);
 }
 
 /*RECETAS*/
@@ -427,12 +453,13 @@ h1 {
 }
 
 .card__receta--button {
-    background: rgb(64, 91, 72);
+    background: var(--color-verdeOscuro);
     border-radius: 3px;
     border-color: transparent;
-    color: #fafafa;
+    color: var(--color-noBlanco);
     text-align: center;
     font: bolder 15px 'Karma', serif; /*style, variant, weight, size, family*/
+    font-weight: bolder;
     height: 35px;
     line-height: 29px;
 
@@ -484,10 +511,8 @@ h1 {
     background-image: url('imagenes/SVG/guardado.svg');
 }
 
-/*HACER QUE TRANSICIONE DEL CORAZÓN A UN TICK cheked y se ponga en un grisecito o que pase de vaío a relleno*/
-
 .card__receta--info {
-    color: #121212;
+    color: var(--color-grisOscuro-texto);
     cursor: default;
     text-align: center;
     font: 17px 'Playfair Displays', serif;
@@ -504,28 +529,23 @@ h1 {
 /*FIN DE PÁGINA*/
 
 #pageEnd {
-    border-top: 1px solid #535e53;
+    border-top: 1px solid var(--color-verdeOscuro-bordes);
     height: 50vh;
 
     padding: 0% 5%;
 }
 
-#pageEnd__title {
-    color: rgb(33, 35, 34);
+#pageEnd__title, #pageEnd__subtitle {
+    color: var(--color-grisOscuro);
     cursor: default;
-    font: bolder calc(1em + 0.6vw) 'Karma', serif;
+    font-weight: bolder;
+    font-family: var(--font-family-generalSerif);
     text-align: center;
-
+   
     display: block;
 }
 
 #pageEnd__subtitle {
-    color: rgb(33, 35, 34);
-    cursor: default;
-    font: bolder calc(1em + 0.4vw) 'Karma', serif;
-    text-align: center;
-   
-    display: block;
     margin-top: 2vh;
 }
 
@@ -539,22 +559,23 @@ h1 {
 }
 
 #pageEnd__form--input {
-    background-color: #ffffff;
+    background-color: var(--color-noBlanco);
     border: 1px solid rgba(64, 91, 72, 0.592);
     border-radius: 4px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.09);
-    font: calc(1em + 0.1vw) 'Karma', serif;
+    font-family: var(--font-family-generalSerif);
 
     padding: 5px 10px;
 }
 
 #pageEnd__form--button {
-    background: rgb(64, 91, 72);
+    background: var(--color-verdeOscuro);
     border-radius: 4px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.09);
     border-color: transparent;
-    color: #fafafa;
-    font: 300 1em 'Karma', serif;
+    color: var(--color-noBlanco);
+    font-family: var(--font-family-generalSerif);
+    font-weight: 300;
     text-align: center;
     letter-spacing: 1px;
     
@@ -564,11 +585,10 @@ h1 {
 }
 
 /*FOOTER*/
-
 footer {
     background: #343936;
     cursor: default; 
-    font-family: 'Karma', serif;
+    font-family: var(--font-family-generalSerif);
 
     padding: 5%;
 }
@@ -578,8 +598,8 @@ footer {
 }
 
 .footer__links {
-    font-family: 'Karma', serif;
-    color: #9faca4;
+    font-family: var(--font-family-generalSerif);
+    color: var(--color-verdeClaro);
     
     margin: 0%;
     padding-top: 60px;
@@ -587,11 +607,11 @@ footer {
 
 footer a {
     display: block;
-    color: #9faca4;
+    color: var(--color-verdeClaro);
 }
 
 footer a:hover {
-    color: #616562;
+    color: var(--color-verdeClaro-hover);
 }
 
 footer i {
@@ -602,16 +622,6 @@ footer i {
 
 .footer__logo{    
     padding-top: 6vh;
-}
-
-.footer__rigths {
-    color: rgb(87, 97, 87);
-    font-size: calc(1em + 0.2vw);
-    text-align: right;
-
-    width: 100%;
-    
-    padding-right: 0.5vw;
 }
 
 /*MODAL INICIE SESIÓN*/
@@ -637,11 +647,11 @@ footer i {
 }
 
 #modal__content {
-    background-color: #fafafa;
+    background-color: var(--color-noBlanco);
     border-radius: 5px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 
                 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-    background: #fafafa;
+    background: var(--color-noBlanco);
     overflow: auto;
     cursor: default;
   
@@ -650,9 +660,8 @@ footer i {
 }
 
 #modal__header {
-    color: #353535;
+    color: var(--color-grisOscuro);
     border-bottom: 1px solid #35353569;
-    font-size: calc(1rem + 0.25vw);
     font-weight: 500;
   
     width: 100%;
@@ -693,12 +702,12 @@ footer i {
 }
 
 #modal__body--form label {
-    color: #353535;
+    color: var(--color-grisOscuro);
     font-weight: 500;
 }
 
 .modal__body--input {
-    background-color: #fafafa;
+    background-color: var(--color-noBlanco);
     border: 1px solid rgba(64, 91, 72, 0.592);
     border-radius: 5px;
 
@@ -706,8 +715,7 @@ footer i {
 }
 
 #modal__body--forgotPass {
-    font-size: 14px;
-    color: rgb(46, 53, 48);
+    color: var(--color-verdeOscuro-link);
 }
 
 .modal__body--button{
@@ -717,15 +725,13 @@ footer i {
 }
 
 #modal__body--buttonInicieSesion {
-    background-color: rgb(64, 91, 72);
+    background-color: var(--color-verdeOscuro);
     border: none;
     border-radius: 5px;
-    color: #fafafa;
+    color: var(--color-noBlanco);
 }
 
 #modal__body--textoRegistrate {
-    font-size: 16px;
-    
     margin-bottom: 25px;
 
     text-align: center;
@@ -743,7 +749,7 @@ footer i {
 }
 
 #modal__body--linea1, #modal__body--linea2 {
-    background-color: #353535;
+    background-color: var(--color-grisOscuro);
 
     height: 1px;
     display: inline-block;
@@ -753,7 +759,7 @@ footer i {
     background-color: rgb(216, 122, 50);
     border: none;
     border-radius: 5px;
-    color: #fafafa;
+    color: var(--color-noBlanco);
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -793,15 +799,15 @@ footer i {
 }
 
 .cajaConForm a {
-    font-family: 'Karla', sans-serif;
+    font-family: var(--font-family-general);
     text-align: right;
 }
 
 .form--input {
-    background-color: #fafafa;
+    background-color: var(--color-noBlanco);
     border: 1px solid rgba(64, 91, 72, 0.592);
     border-radius: 5px;
-    font: calc(1em + 0.1vw) 'Karma', serif;
+    font-family: var(--font-family-generalSerif);
 
     margin-top: 3px;
     margin-bottom: 9px;
@@ -810,11 +816,12 @@ footer i {
 }
 
 .form--button {
-    background-color: rgb(64, 91, 72);
+    background-color: var(--color-verdeOscuro);
     border: none;
     border-radius: 5px;
-    color: #fafafa;
-    font: 300 1em 'Karma', serif;
+    color: var(--color-noBlanco);
+    font-family: var(--font-family-generalSerif);
+    font-weight: 300;
     text-align: center;
     letter-spacing: 1px;
     
@@ -835,8 +842,9 @@ footer i {
 
 /*Titulo de la receta*/
 #tituloReceta {
-    color: rgb(33, 35, 34);
-    font: bold calc(1em + 1.5vw) 'Karma', serif;
+    color: var(--color-verdeOscuro-link);
+    font-family: var(--font-family-generalSerif);
+    font-weight: bold;
 
     width: 100%;
     margin-top: 50px;
@@ -859,7 +867,7 @@ footer i {
 }
 
 #tituloReceta__linea {
-    background-color: #798f81;
+    background-color: var(--color-verdeClaro);
     border-radius: 4px;
 
     width: 16vw;
@@ -872,7 +880,8 @@ footer i {
 
 #encabezadoRecetas {
     color: rgb(33, 35, 34);
-    font: bold calc(1em + 0.7vw) 'Karma', serif;
+    font-family: var(--font-family-generalSerif);
+    font-weight: bold;
     text-transform: capitalize;
 
     width: 100%;
@@ -889,7 +898,7 @@ footer i {
 }
 
 #receta__info, #receta__ingredientes  {
-    font: calc(1rem + 0.2vw) 'Karla', sans-serif;
+    font-family: var(--font-family-general);
     margin-bottom: 30px;
 }
 
@@ -914,8 +923,8 @@ footer i {
 /*This code was retrieved from: https://www.html5canvastutorials.com/blog/2012/06/custom-form-radio-checkbox/*/
 .recetas__checkbox {
 	-webkit-appearance: none;
-	background-color: #fafafa;
-	border: 1px solid #535e53;
+	background-color: var(--color-noBlanco);
+	border: 1px solid var(--color-verdeOscuro-bordes);
 	border-radius: 4px;
 
 	padding: 9px;
@@ -929,20 +938,19 @@ footer i {
 }
 
 .recetas__checkbox:checked {
-    color: #fafafa;
-	background-color: #535e53;
-	border: 1px solid #535e53;	
+    color: var(--color-noBlanco);
+	background-color: var(--color-verdeOscuro-bordes);
+	border: 1px solid var(--color-verdeOscuro-bordes);	
 }
 
 .recetas__checkbox:checked:after {
 	content: '\2714';
-	font-size: 14px;
 
 	position: absolute;
 	top: -0.8px;
 	left: 4.2px;
     
-	color: #fafafa;
+	color: var(--color-noBlanco);
 }
 
 /*receta*/
@@ -956,22 +964,22 @@ ol {
 
 ol li {
     counter-increment: pasosReceta;
-    font: calc(1rem + 0.3vw) 'Karla', sans-serif;
+    font-family: var(--font-family-general);
 
     padding-left: 10px;
 }
 
 .pasosP {
-    font: calc(1rem + 0.3vw) 'Karla', sans-serif;
+    font-family: var(--font-family-general);
 
     padding-left: 19px;
 }
 
 ol li::marker {
     content: counter(pasosReceta) "|";
-    color: #535e53;
+    color: var(--color-verdeOscuro-bordes);
     font-weight: bold;
-    font: calc(1rem + 1vw)  'Playfair Display', serif;
+    font-family: var(--font-family-logo);
 }
 
 #receta__receta--pasos li {
@@ -984,7 +992,7 @@ ol li::marker {
 
 /*Recursos*/
 #recursosReceta {
-    font: calc(1rem + 0.1vw) 'Karla', sans-serif !important;
+    font-family: var(--font-family-general) !important;
 }
 
 #recursosReceta img {
@@ -999,13 +1007,13 @@ ol li::marker {
 .recursosReceta__notas--title{
     text-align: center;
     font-weight: bold;
-    border-bottom: 1px solid #535e53;
+    border-bottom: 1px solid var(--color-verdeOscuro-bordes);
 
     height: 35px;
 }
 
 .recursosReceta__notas {
-    border: 1px solid #535e53;
+    border: 1px solid var(--color-verdeOscuro-bordes);
     border-radius: 2px;
     margin: 20px auto;
     padding: 5px;
@@ -1022,10 +1030,14 @@ ol li::marker {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*MEDIA SCREENS Y BREAKPOINTS*/
 
-@media (max-width: 580px) {
+@media screen and (max-width: 580px) {
     /*Navigation Bar*/
     .navBar, .navBar__search.active {
         height: 50px;
+    }
+    
+    #ctn_searchSecc {    
+        height: calc(100vh - 50px);
     }
     
     .navBar__menu {
@@ -1036,10 +1048,6 @@ ol li::marker {
         padding-top: 9px;
     }
     
-    .navBar__logo {
-        font-size: 30px;
-    }
-
     #ctnEncabezado {
         display: flex;
         justify-content: center;
@@ -1091,7 +1099,15 @@ ol li::marker {
     }
 }
 
-@media (min-width: 580px) and (max-width: 800px) {
+@media screen and (min-width: 580px) and (max-width: 800px) {
+    .navBar, .navBar__search.active {
+        height: 55px;
+    }
+
+    #ctn_searchSecc {    
+        min-height: calc(100vh - 55px);
+    }
+
     #cuchara, #batidor {
         height: 50vw;
     }
@@ -1117,22 +1133,14 @@ ol li::marker {
     }
 }
 
-@media (min-width: 580px) {
-    /*Navigation Bar*/
-    .navBar, .navBar__search.active {
-        height: 55px;
-    }
-    
+@media screen and (min-width: 580px) {
+    /*Navigation Bar*/    
     .navBar__menu {
         margin-top: 56px;
     }
 
     .navBar__cntlupita, .navBar__hamburger {
         padding-top: 14px;
-    }
-    
-    .navBar__logo {
-        font-size: 35px;
     }
 
     /*pageEnd*/
@@ -1192,11 +1200,10 @@ ol li::marker {
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     /*Inicio searchSecc*/
     #searchSecc__form--input {
         border-radius: 15px 4px 15px 4px;
-        font-size:  calc(1em + 0.2vw);
         text-align: center;
 
         width: 55vw;
@@ -1208,8 +1215,6 @@ ol li::marker {
     }
 
     #searchSecc__form--button {
-        font-size:  calc(1em + 0.2vw);
-
         width: 55vw;
         height: 9vh;
 
@@ -1293,12 +1298,11 @@ ol li::marker {
     }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     /*Inicio searchSecc*/
     #searchSecc__form--input {
         border-radius: 15px 0px 0px 4px; /*top-left corner, top-right corner, bottom-right corner, bottom-left corner*/
         box-shadow: inset -7px 0px 9px -3px rgba(0, 0, 0, 0.4);
-        font-size:  calc(1em + 0.2vw);
         text-align: left;
 
         width: 30vw;
@@ -1309,8 +1313,6 @@ ol li::marker {
     }
 
     #searchSecc__form--button {
-        font-size:  calc(1em + 0.2vw);
-
         width: 10vw;
         height: 9vh;
 
@@ -1385,7 +1387,7 @@ ol li::marker {
     }
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     /*MODAL INICIE SESIÓN*/
     #modal__body--form {
         width: 100%;
@@ -1450,8 +1452,17 @@ ol li::marker {
     }
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-    
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    .navBar, .navBar__search.active {
+        height: 55px;
+    }
+
+    #ctn_searchSecc {    
+        min-height: calc(100vh - 55px);
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
     #cuchara, #batidor {
         height: 40vw;
     }
@@ -1471,8 +1482,7 @@ ol li::marker {
     }
 }
 
-
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
     #formH1 {        
         position: absolute;
         left: 43%;
@@ -1542,18 +1552,18 @@ ol li::marker {
     }
 }
 
-@media (min-height: 1100px) {
+@media screen and (min-height: 1100px) {
     #cnt_recetas {
         border-bottom: 1px solid #9cbca8;
         margin-top: 15vh;
     }
 }
 
-@media (min-width: 1024px) {
-    /*Navigation Bar*/
-    .navBar, .navBar__search.active {
-        height: 70px;
+@media screen and (min-width: 1024px) {    
+    .navBar__hamburger {
+        padding-top: 27px;
     }
+
     
     .navBar__menu {
         margin-top: 71px;
@@ -1561,10 +1571,6 @@ ol li::marker {
 
     .navBar__cntlupita, .navBar__hamburger {
         padding-top: 20px;
-    }
-
-    .navBar__logo {
-        font-size: 45px;
     }
 
     /*pageEnd*/
@@ -1599,7 +1605,7 @@ ol li::marker {
     }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     #cuchara, #batidor {
         height: 30vw;
     }
@@ -1619,7 +1625,7 @@ ol li::marker {
     }
 }
 
-@media (min-width: 1278px) {
+@media screen and (min-width: 1278px) {
     /*PÁGINAS RECETAS*/
     .receta__ingredientes--checkList {     
         margin-right: 15%;
@@ -1627,22 +1633,24 @@ ol li::marker {
 }
 
 
-@media (min-width: 1700px) {
-    /*Navigation Bar*/
+@media screen and (min-width: 1024px){
     .navBar, .navBar__search.active {
-        height: 90px;
+        height: 70px;
     }
     
+    #ctn_searchSecc {    
+        min-height: calc(100vh - 70px);
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    /*Navigation Bar*/
     .navBar__menu {
         margin-top: 91px;
     }
     
     .navBar__cntlupita, .navBar__hamburger {
         padding-top: 25px;
-    }
-    
-    .navBar__logo {
-        font-size: 70px;
     }
 
     /*pageEnd*/
@@ -1653,4 +1661,31 @@ ol li::marker {
         display: inline-block;
         margin-left: 5px;
     }
+}
+
+/*FONT SIZES*/
+@media screen and (max-width: 520px) {
+    :root {
+      font-size: 16px; } 
+}
+@media screen and (min-width: 520px) and (max-width: 800px) {
+    :root {
+      font-size: 17px; 
+    } 
+}
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+    :root {
+      font-size: 18px; } 
+}
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    :root {
+      font-size: 19px; } 
+}
+@media screen and (min-width: 1500px) and (max-width: 1800px) {
+    :root {
+      font-size: 20px; } 
+}
+@media screen and (min-width: 1800px) {
+    :root {
+      font-size: 22px; } 
 }

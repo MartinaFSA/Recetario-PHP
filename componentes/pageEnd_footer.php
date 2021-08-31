@@ -1,8 +1,8 @@
     <!--SECCIÓN FIN DE PÁGINA-->
     <section id="pageEnd">
         <div>
-            <p id="pageEnd__title"> ¿Querés que te avisemos cuando subimos nuevas recetas? </p>
-            <p id="pageEnd__subtitle"> Suscribite al newsletter acá! </p>
+            <p id="pageEnd__title" class="textoGrande"> ¿Querés que te avisemos cuando subimos nuevas recetas? </p>
+            <p id="pageEnd__subtitle" class="textoGrande"> Suscribite al newsletter acá! </p>
         </div>
 
         <div id="pageEnd__form">
@@ -20,7 +20,7 @@
                     <!--Modal receta agregada-->
                     <div id='modalAviso' class='ctn__modalPHP'>
                         <div class='modalPHP'>
-                            <p>" . $news . "</p>
+                            <p class='textoChico'>" . $news . "</p>
                         </div>
                     </div>
 
@@ -35,9 +35,9 @@
         <div class="footer__section">
             <div class="footer__links">
                 <ul>
-                    <il> <p> <a href=""> <i class="far fa-envelope fa-lg"></i> compañia@example.com </p> </a> </il>
-                    <il> <p> <a href=""> <i class="fab fa-youtube fa-lg"></i> MiCanal</p> </a> </il>
-                    <il> <p> <a href="">  <i class="fab fa-instagram fa-lg"></i> @MiInstragram</p> </a> </il>
+                    <il> <p> <a href=""> <i class="far fa-envelope fa-lg textoChico"></i> compañia@example.com </p> </a> </il>
+                    <il> <p> <a href=""> <i class="fab fa-youtube fa-lg textoChico"></i> MiCanal</p> </a> </il>
+                    <il> <p> <a href="">  <i class="fab fa-instagram fa-lg textoChico"></i> @MiInstragram</p> </a> </il>
                 </ul>
             </div>
         

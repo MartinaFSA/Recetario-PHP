@@ -1,5 +1,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width-device-width, initial-scale=1.0">
+<meta name="keywords" content="recetario, recetas, recetas faciles, ingredientes, martina fernandez suarez anzorena">
+<meta name="description" content="Recetas de comidas omnívoras, veganas y vegetarianas. Encontrá entradas, postres y platos principales.">
+
+<meta name="author" content="MartinaFSA">
 
 <link rel = "icon" href = "../imagenes/faviconRecetario.ico">
 

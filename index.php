@@ -29,13 +29,13 @@
             <div class="flexAndCenter">
 
                 <form action="busqueda.php" method="POST" id="searchSecc__form" class="col-auto">
-                    <input name="buscadorSearchSecc" type="text" id="searchSecc__form--input" placeholder="Buscar">
-                    <button name="buscadorSearchSecc__submit" id="searchSecc__form--button" type="submit">Buscar</button>    
+                    <input name="buscadorSearchSecc" type="text" id="searchSecc__form--input"  class="textoChico" placeholder="Buscar">
+                    <button name="buscadorSearchSecc__submit" id="searchSecc__form--button" type="submit" class="textoChico">Buscar</button>    
                 </form>
 
-                <a href="enProceso.php" id="searchSecc_searchIngredient">
+                <a href="enProceso.php" id="searchSecc_searchIngredient" class="textoChico">
                     Búsqueda por ingrediente
-                    <i class="fas fa-chevron-right fa-sm" style="background: transparent"></i>
+                    <i class="fas fa-chevron-right fa-sm" style="background-color: transparent"></i>
                 </a>
             </div>
         </section>
@@ -43,14 +43,17 @@
         <!--SECCIÓN RECETAS-->
         <section id="encabezado_section">
             <div id="ctnEncabezado">
-                <h1>Recetas</h1>
+                <h1 class="textoTitulos">Recetas</h1>
+            </div>
+            <div id="ctnButton">
+                <button id="encabezado_section__button"><a href="todas.php" id="encabezadoSection__button--link">Más recetas</a></button>
             </div>
         </section>
 
         <!--CARDS-->
         <section id="cnt_recetas">
             <div class="ctn_cards container-fluid">
-                <div class="cards__recetas row">
+                <div class="cards__recetas textoChico row">
                     <?php
                         $sentencia = $pdo -> prepare("SELECT * FROM recetas"); //Traigo todas las recetas de la tabla
                         $sentencia -> execute(); //Ejecuto la sentencia de arriba
@@ -129,7 +132,7 @@
                     <!--Modal receta agregada-->
                     <div id='modalAviso' class='ctn__modalPHP'>
                         <div class='modalPHP'>
-                            <p>" . $aviso . "</p>
+                            <p class='textoChico'>" . $aviso . "</p>
                         </div>
                     </div>
 

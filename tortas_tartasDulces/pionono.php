@@ -118,7 +118,7 @@
                             <div class="recursosReceta__notas--title">
                                 <p>Notas</p>
                             </div>
-                            <p class="recursosReceta__notas--p">Esta receta fue recuperada de Cocineros Argentinos. <a href="https://www.youtube.com/watch?v=gjK5Kc5SC7Y">Visitala acá </a> y seguí todos sus tips.</p>
+                            <p class="recursosReceta__notas--p">Esta receta fue recuperada de <cite>Cocineros Argentinos. </cite> <a href="https://www.youtube.com/watch?v=gjK5Kc5SC7Y">Visitala acá </a> y seguí todos sus tips.</p>
                         </div>
 
                         <div class="recursosReceta__notas">

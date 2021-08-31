@@ -1,14 +1,14 @@
     <!--SECCIÓN FIN DE PÁGINA-->
     <section id="pageEnd">
         <div>
-            <p id="pageEnd__title"> ¿Querés que te avisemos cuando subimos nuevas recetas? </p>
-            <p id="pageEnd__subtitle"> Suscribite al newsletter acá! </p>
+            <p id="pageEnd__title" class="textoGrande"> ¿Querés que te avisemos cuando subimos nuevas recetas? </p>
+            <p id="pageEnd__subtitle" class="textoGrande"> Suscribite al newsletter acá! </p>
         </div>
 
         <div id="pageEnd__form">
             <form action="../componentes/newsletter.php" method="POST">
-                <input type="email" name="mailNewsletter" placeholder="mariano@example.com" id="pageEnd__form--input">
-                <input type="submit" name="pageEnd__form--button" id="pageEnd__form--button" value="Suscribirme">
+                <input type="email" name="mailNewsletter" placeholder="mariano@example.com" id="pageEnd__form--input" class="textoMediano">
+                <input type="submit" name="pageEnd__form--button" id="pageEnd__form--button" value="Suscribirme" class="textoMediano">
             </form>
         </div>
 
@@ -20,7 +20,7 @@
                     <!--Modal receta agregada-->
                     <div id='modalAviso' class='ctn__modalPHP'>
                         <div class='modalPHP'>
-                            <p>" . $news . "</p>
+                            <p class='textoMediano'>" . $news . "</p>
                         </div>
                     </div>
 
@@ -36,9 +36,9 @@
         <div class="footer__section">
             <div class="footer__links">
                 <ul>
-                    <il> <p> <a href=""> <i class="far fa-envelope fa-lg"></i> compañia@example.com </p> </a> </il>
-                    <il> <p> <a href=""> <i class="fab fa-youtube fa-lg"></i> MiCanal</p> </a> </il>
-                    <il> <p> <a href="">  <i class="fab fa-instagram fa-lg"></i> @MiInstragram</p> </a> </il>
+                    <il> <p> <a href=""> <i class="far fa-envelope fa-lg textoMediano"></i> compañia@example.com </p> </a> </il>
+                    <il> <p> <a href=""> <i class="fab fa-youtube fa-lg textoMediano"></i> MiCanal</p> </a> </il>
+                    <il> <p> <a href="">  <i class="fab fa-instagram fa-lg textoMediano"></i> @MiInstragram</p> </a> </il>
                 </ul>
             </div>
         

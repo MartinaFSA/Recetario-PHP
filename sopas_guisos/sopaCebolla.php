@@ -129,7 +129,7 @@
                             <div class="recursosReceta__notas--title">
                                 <p>Notas</p>
                             </div>
-                            <p class="recursosReceta__notas--p">Esta es una adaptación de la receta de Joshua Weissman. <a href="https://www.youtube.com/watch?v=LIy6Bhg7nH8">Mirá la receta acá.</a> </p>
+                            <p class="recursosReceta__notas--p">Esta es una adaptación de la receta de <cite>Joshua Weissman.</cite> <a href="https://www.youtube.com/watch?v=LIy6Bhg7nH8">Mirá la receta acá.</a> </p>
                         </div>
                     </div>
                 </div>
