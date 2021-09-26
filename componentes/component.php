@@ -46,8 +46,7 @@
 
                             $idRecetas = array_column($_SESSION['recetasGuardadas'], 'ID');
 
-                            /*
-                            COMENTO ESTO PORQUE SOLO DEJA GUARDAR UNA RECETA    
+                            /*COMENTO ESTO PORQUE SOLO DEJA GUARDAR UNA RECETA    
                             if(in_array($id, $idRecetas)) { 
 
                                 $aviso = "La receta " . $nombre__receta . " ya ha sido guardada";

@@ -26,18 +26,18 @@
 
         <main> 
             <!--SECCIÓN RECETAS-->
-            <section id="encabezado_section">
-                <div id="ctnEncabezado">
-                    <h1>Recetas Guardadas</h1>
+            <section class="encabezado_section">
+                <div class="ctnEncabezado">
+                    <h1 class="textoTitulos">Recetas Guardadas</h1>
                 </div>
 
-                <div id="ctnButton">
-                    <button id="encabezado_section__button"><a href="index.php" id="encabezadoSection__button--link">Más recetas</a></button>
+                <div class="ctnButton">
+                    <button class="encabezado_section__button"><a href="todas.php" class="encabezadoSection__button--link textoTitulos textoChico">Más recetas</a></button>
                 </div>
             </section>
             
             <!--CARDS-->
-            <section id="cnt_recetas">
+            <section class="cnt_recetas">
                 <div class="ctn_cards container-fluid">
                     <div class="cards__recetas row">
                         <?php
@@ -176,7 +176,6 @@
             include("componentes/pageEnd_footer.php");
         ?>
         
-        <script src="javascript.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

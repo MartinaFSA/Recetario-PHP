@@ -26,14 +26,14 @@
     <main>
 
         <!--SECCIÓN RECETAS-->
-        <section id="encabezado_section">
-            <div id="ctnEncabezado">
+        <section class="encabezado_section">
+            <div class="ctnEncabezado">
                 <h1>Todas las recetas</h1>
             </div>
         </section>
 
         <!--CARDS-->
-        <section id="cnt_recetas">
+        <section class="cnt_recetas">
             <div class="ctn_cards container-fluid">
                 <div class="cards__recetas row">
                     <?php
@@ -50,7 +50,7 @@
 
                             <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/<?php echo $recetaArray['imagen__receta']?>')">
 
-                            <a href='<?php echo $recetaArray['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button' value='VER RECETA'></a>
+                            <a href='<?php echo $recetaArray['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button botonVerde textoBlanco flexAndCenter' value='VER RECETA'></a>
                             
                             <input type='hidden' name='recetalink' id='recetalink' value='<?php echo $recetaArray['link__receta'] ?>'>
                             <input type='hidden' name='imagenReceta' id='imagenReceta' value='<?php echo $recetaArray['imagen__receta'] ?>'>
@@ -65,42 +65,7 @@
                             <input type='hidden' name='receta_id' value='<?php echo $recetaArray['ID']?>'>
                             
                         </form>
-                        <style>
-                            .imgReceta {
-                                background-position: center;
-                                background-size: cover;
-                                border-radius: 2% 2% 0% 0%;
-
-                                width: 300px;
-                                height: 250px;
-
-                                margin: 0%;
-                                padding: 0%; 
-                            }
-
-                            #imagenSReceta, #recetaSlink, #recetaname, #recetainfo {
-                                border: none;
-                                -webkit-user-select: none; /* Safari */        
-                                -moz-user-select: none; /* Firefox */
-                                -ms-user-select: none; /* IE10+/Edge */
-                                user-select: none; /* Standard */
-                                pointer-events: none;
-                            }
-
-                            #imagenSReceta::selection, #recetaname::selection, #recetainfo::selection {
-                                color: none;
-                                background: none;
-                            }
-                            
-                            #imagenSReceta, #recetaname, #recetainfo {
-                                background-color: transparent;
-                                text-align: center;
-                            }
-
-                            #recetainfo {
-                                overflow-wrap: break-word;
-                            }
-                        </style>
+                    
                     <?php } ?>
                 </div>
             </div>
@@ -110,7 +75,7 @@
         <?php 
             if(isset($aviso)) { //Si $aviso existe...
                     
-                echo "<section id='contenedorDeModales'>
+                echo "<section class='contenedorDeModales'>
                     <!--Modal receta agregada-->
                     <div id='modalAviso' class='ctn__modalPHP'>
                         <div class='modalPHP'>
@@ -134,7 +99,6 @@
             include("componentes/pageEnd_footer.php");
         ?>
 
-        <script src="javascript.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

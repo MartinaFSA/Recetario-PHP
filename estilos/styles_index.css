@@ -1,0 +1,74 @@
+/*BÚSQUEDA DEL INDEX*/
+#ctn_searchSecc {
+    background-image: url("../imagenes/fondoBusquedaIndex.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    font-family: var(--font-family-generalSerif);
+
+    width: 100%;
+    height: 100vh;  
+
+    margin: 0%;
+    padding: 0%;
+}
+#searchSecc_searchIngredient {
+    font-weight: 550;
+
+    display: block;
+    position: relative;
+}
+
+/*Cards*/
+.imgReceta {
+    background-position: center;
+    background-size: cover;
+    border-radius: 2% 2% 0% 0%;
+
+    width: 300px;
+    height: 250px;
+
+    margin: 0%;
+    padding: 0%; 
+}
+#imagenSReceta, #recetaSlink, #recetaname, #recetainfo {
+    border: none;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    pointer-events: none;
+}
+#imagenSReceta::selection, #recetaname::selection, #recetainfo::selection {
+    color: none;
+    background: none;
+}
+#imagenSReceta, #recetaname, #recetainfo {
+    background-color: transparent;
+    text-align: center;
+}
+#recetainfo {
+    overflow-wrap: break-word;
+}
+#searchSecc_searchIngredient:hover {
+    color: #353535;
+}
+@media screen and (max-width: 768px) {
+    /*Inicio searchSecc*/
+    #searchSecc__form--input, #searchSecc__form--button{
+        border-radius: 15px 4px 15px 4px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /*Inicio searchSecc*/
+    #searchSecc__form--input {
+        border-radius: 15px 0px 0px 4px;
+    }
+    #searchSecc__form--button{
+        border-radius: 0px 4px 15px 0px;
+    }
+}

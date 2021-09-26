@@ -1,14 +1,14 @@
     <!--SECCIÓN FIN DE PÁGINA-->
-    <section id="pageEnd">
+    <section class="pageEnd">
         <div>
-            <p id="pageEnd__title" class="textoGrande"> ¿Querés que te avisemos cuando subimos nuevas recetas? </p>
-            <p id="pageEnd__subtitle" class="textoGrande"> Suscribite al newsletter acá! </p>
+            <p class="pageEnd__title textoGrande">¿Querés que te avisemos cuando subimos nuevas recetas?</p>
+            <p class="pageEnd__subtitle textoGrande">Suscribite al newsletter acá!</p>
         </div>
 
-        <div id="pageEnd__form">
-            <form action="componentes/newsletter.php" method="POST">
-                <input type="email" name="mailNewsletter" placeholder="mariano@example.com" id="pageEnd__form--input">
-                <input type="submit" name="pageEnd__form--button" id="pageEnd__form--button" value="Suscribirme">
+        <div class="pageEnd__form">
+            <form action="../componentes/newsletter.php" method="POST">
+                <input type="email" name="mailNewsletter" placeholder="mariano@example.com" class="pageEnd__form--input textoChico">
+                <input type="submit" name="pageEnd__form--button" class="pageEnd__form--button textoChico" value="Suscribirme">
             </form>
         </div>
 
@@ -16,9 +16,9 @@
         <?php 
             if(isset($news)) { //Si $aviso existe...
                     
-                echo "<section id='contenedorDeModales'>
+                echo "<section class='contenedorDeModales'>
                     <!--Modal receta agregada-->
-                    <div id='modalAviso' class='ctn__modalPHP'>
+                    <div class='modalAviso ctn__modalPHP'>
                         <div class='modalPHP'>
                             <p class='textoChico'>" . $news . "</p>
                         </div>
@@ -42,8 +42,10 @@
             </div>
         
             <div class="ctn__footer--logo">
-                <img class="footer__logo" src="imagenes/SVG/logoRecetario.svg" alt="Logo de la página">
+                <a href="index.php"><img class="footer__logo" src="imagenes/SVG/logoRecetario.svg" alt="Logo de la página"></a>
             </div>
         </div>
     </section>
 </footer>
+
+<script src="scripts/javascript.js"></script>

@@ -24,8 +24,8 @@ function mostrarSearch() {
 };
 
 //Modal inicie sesión
-const modal = document.getElementById('modal__inicieSesion');
-const modalClose = document.getElementById('close-modal');
+var modal = document.getElementById('modal__inicieSesion');
+var modalClose = document.getElementById('close-modal');
 var modalOpen = document.getElementsByClassName('modal__inicieSesion--button')[0];
 
 modalOpen.addEventListener('click', openModalInicioSesion);

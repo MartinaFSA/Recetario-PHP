@@ -14,4 +14,4 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karma:wght@600;700&family=Elsie+Swash+Caps&display=swap&family=Playfair+Display:wght@500&display=swap&family=Karla&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../estilos/styles.css">

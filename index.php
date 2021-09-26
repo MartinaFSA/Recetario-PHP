@@ -10,6 +10,8 @@
     <?php 
         require("componentes/head.php");
     ?>
+    
+    <link rel="stylesheet" href="estilos/styles_index.css">
 
     <title>Recetario - Inicio</title>
     <link rel = "icon" href = "imagenes/faviconRecetario.ico">
@@ -28,12 +30,12 @@
         <section id="ctn_searchSecc">
             <div class="flexAndCenter">
 
-                <form action="busqueda.php" method="POST" id="searchSecc__form" class="col-auto">
-                    <input name="buscadorSearchSecc" type="text" id="searchSecc__form--input"  class="textoChico" placeholder="Buscar">
-                    <button name="buscadorSearchSecc__submit" id="searchSecc__form--button" type="submit" class="textoChico">Buscar</button>    
+                <form action="busqueda.php" method="POST" id="searchSecc__form" class="col-auto positionAbsolute">
+                    <input name="buscadorSearchSecc" type="text" id="searchSecc__form--input"  class="inputText_Busquedas textoChico inputBlancoSinBorde" placeholder="Buscar">
+                    <button name="buscadorSearchSecc__submit" id="searchSecc__form--button" type="submit" class="inputButton_Busquedas textoChico textoBlanco botonVerde">Buscar</button>    
                 </form>
 
-                <a href="enProceso.php" id="searchSecc_searchIngredient" class="textoChico">
+                <a href="ingredientes.php" id="searchSecc_searchIngredient" class="textoChico linkVerdeOscuro">
                     Búsqueda por ingrediente
                     <i class="fas fa-chevron-right fa-sm" style="background-color: transparent"></i>
                 </a>
@@ -41,21 +43,21 @@
         </section>
 
         <!--SECCIÓN RECETAS-->
-        <section id="encabezado_section">
-            <div id="ctnEncabezado">
-                <h1 class="textoTitulos">Recetas</h1>
+        <section class="encabezado_section">
+            <div class="ctnEncabezado">
+                <h1 class="textoTitulos">Mejores Recetas</h1>
             </div>
-            <div id="ctnButton">
-                <button id="encabezado_section__button"><a href="todas.php" id="encabezadoSection__button--link">Más recetas</a></button>
+            <div class="ctnButton">
+                <button class="encabezado_section__button"><a href="todas.php" class="encabezadoSection__button--link textoChico">Más recetas</a></button>
             </div>
         </section>
 
         <!--CARDS-->
-        <section id="cnt_recetas">
+        <section class="cnt_recetas">
             <div class="ctn_cards container-fluid">
                 <div class="cards__recetas textoChico row">
                     <?php
-                        $sentencia = $pdo -> prepare("SELECT * FROM recetas"); //Traigo todas las recetas de la tabla
+                        $sentencia = $pdo -> prepare("SELECT * FROM recetas WHERE nombre__receta LIKE 'Sopa de cebolla' OR nombre__receta LIKE 'Suprema Maryland'"); //Traigo 4 recetas de la tabla. OR nombre__receta LIKE 'Suprema Maryland' OR nombre__receta LIKE 'Suprema Maryland'
                         $sentencia -> execute(); //Ejecuto la sentencia de arriba
                         $allRecetas = $sentencia -> fetchAll(PDO::FETCH_ASSOC);
 
@@ -68,14 +70,14 @@
 
                             <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/<?php echo $recetaArray['imagen__receta']?>')">
 
-                            <a href='<?php echo $recetaArray['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button' value='VER RECETA'></a>
+                            <a href='<?php echo $recetaArray['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button botonVerde textoBlanco flexAndCenter textoChico' value='VER RECETA'></a>
                             
                             <input type='hidden' name='recetalink' id='recetalink' value='<?php echo $recetaArray['link__receta'] ?>'>
                             <input type='hidden' name='imagenReceta' id='imagenReceta' value='<?php echo $recetaArray['imagen__receta'] ?>'>
 
                             <div class='card__receta--info'>
-                                <input type='text' name='recetaname' id='recetaname' value='<?php echo $recetaArray['nombre__receta'] ?>'> 
-                                <input type='text' name='recetainfo' id='recetainfo' value='<?php echo $recetaArray['info__receta']?>'>
+                                <input type='text' name='recetaname' id='recetaname' class="textoChico" value='<?php echo $recetaArray['nombre__receta'] ?>'> 
+                                <input type='text' name='recetainfo' id='recetainfo' class="textoChico" value='<?php echo $recetaArray['info__receta']?>'>
                             </div>
                             
                             <button name='botonControlador' value='guardar' type='submit' class='card__receta--buttonGuardarIndex modal__inicieSesion--button botonGuardarNoActive' id='<?php echo str_replace(' ', '', $recetaArray['nombre__receta'])?>'> </button>
@@ -83,42 +85,6 @@
                             <input type='hidden' name='receta_id' value='<?php echo $recetaArray['ID']?>'>
                             
                         </form>
-                        <style>
-                            .imgReceta {
-                                background-position: center;
-                                background-size: cover;
-                                border-radius: 2% 2% 0% 0%;
-
-                                width: 300px;
-                                height: 250px;
-
-                                margin: 0%;
-                                padding: 0%; 
-                            }
-
-                            #imagenSReceta, #recetaSlink, #recetaname, #recetainfo {
-                                border: none;
-                                -webkit-user-select: none; /* Safari */        
-                                -moz-user-select: none; /* Firefox */
-                                -ms-user-select: none; /* IE10+/Edge */
-                                user-select: none; /* Standard */
-                                pointer-events: none;
-                            }
-
-                            #imagenSReceta::selection, #recetaname::selection, #recetainfo::selection {
-                                color: none;
-                                background: none;
-                            }
-                            
-                            #imagenSReceta, #recetaname, #recetainfo {
-                                background-color: transparent;
-                                text-align: center;
-                            }
-
-                            #recetainfo {
-                                overflow-wrap: break-word;
-                            }
-                        </style>
                     <?php } ?>
                 </div>
             </div>
@@ -128,14 +94,13 @@
         <?php 
             if(isset($aviso)) { //Si $aviso existe...
                     
-                echo "<section id='contenedorDeModales'>
+                echo "<section class='contenedorDeModales'>
                     <!--Modal receta agregada-->
-                    <div id='modalAviso' class='ctn__modalPHP'>
+                    <div class='modalAviso ctn__modalPHP'>
                         <div class='modalPHP'>
                             <p class='textoChico'>" . $aviso . "</p>
                         </div>
                     </div>
-
                 </section>";
             }
         ?>
@@ -151,8 +116,7 @@
         <?php
             include("componentes/pageEnd_footer.php");
         ?>
-
-        <script src="javascript.js"></script>
+        
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

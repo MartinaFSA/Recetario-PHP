@@ -30,7 +30,6 @@
             //No sale con eso, poner: INSERT INTO recetas (nombre_receta, imagen_receta, info_card, link_receta, id__receta) VALUES ...;
         }*/
     
-    
     //Modelo receta
     $otra = new Receta ("Otra de", "Otra", "??? minutos", "? horas", "recetaEscrita_papaRellena.jpg");
 

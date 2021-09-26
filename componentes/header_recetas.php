@@ -4,8 +4,11 @@
     <nav class="navBar">
                                 
         <ul class="navBar__menu">
-            <li class="navBar__menu-item"><a class="menu-item--link textoChico" href="../index.php">Todas las recetas</a></li>
+            <li class="navBar__menu-item"><a class="menu-item--link textoChico" href="../todas.php">Todas las recetas</a></li>
             <li class="navBar__menu-item"><a class="menu-item--link textoChico" href="../guardadas.php">Recetas guardadas</a></li>
+            <li class="navBar__menu-item"><a class="menu-item--link textoChico" href="../ingredientes.php">Buscar por ingrediente</a></li>
+            <li class="navBar__menu-item"><a class="menu-item--link textoChico" href="../sinTACC.php">Sin TACC</a></li>
+            <li class="navBar__menu-item"><a class="menu-item--link textoChico" href="../sinLacteos.php">Sin lácteos</a></li>
             <li><hr id="navBar__menu-divider"></li>
             <?php
                 if(isset($_SESSION['mail'])) {
@@ -27,10 +30,10 @@
         </div>               
 
         <div class="navBar__search">
-            <form action="busqueda.php" method="POST">
+            <form action="../busqueda.php" method="POST">
                 <span onclick="mostrarSearch()"><i class="fas fa-search navBar__search--lupita" style="color: #353535;"></i></span>
-                <input name="buscadorSearchSecc" type="text" placeholder="Buscar" class="navBar__search--input textoChico">
-                <input name="buscadorSearchSecc__submit" class="navBar__search--submit textoChico" type="submit" value="Buscar">
+                <input name="buscadorSearchSecc" type="text" placeholder="Buscar" class="inputBlancoSinBorde navBar__search--input textoChico" autofocus>
+                <input name="buscadorSearchSecc__submit" class="botonVerde textoBlanco navBar__search--submit textoChico" type="submit" value="Buscar">
             </form>
         </div>
 
