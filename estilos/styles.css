@@ -205,9 +205,13 @@ header {
     padding: 0% 2vw;
 
     overflow: auto;
-
+}
+.navBar > div {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /*menu*/
@@ -289,7 +293,6 @@ header {
     text-align: right;
     background-color: transparent;
     display: inline-block;
-    padding-top: 15px;
 }
 .navBar__search--lupita {
     width: 25px;
@@ -316,6 +319,7 @@ header {
     background-color: var(--color-noBlanco);
 
     width: calc(100% - 2vw);
+    padding-top: 15px;
     margin: 0%;
 
     position: absolute;
@@ -977,10 +981,6 @@ ol li::marker {
     .navBar__menu {
         margin-top: 51px;
     }
-
-    .navBar__cntlupita, .navBar__hamburger {
-        padding-top: 9px;
-    }
     
     .ctnEncabezado {
         display: flex;
@@ -1071,10 +1071,6 @@ ol li::marker {
     /*Navigation Bar*/    
     .navBar__menu {
         margin-top: 56px;
-    }
-
-    .navBar__cntlupita, .navBar__hamburger {
-        padding-top: 14px;
     }
 
     /*pageEnd*/
@@ -1466,17 +1462,8 @@ ol li::marker {
 }
 
 @media screen and (min-width: 1024px) {    
-    .navBar__hamburger {
-        padding-top: 27px;
-    }
-
-    
     .navBar__menu {
         margin-top: 71px;
-    }
-
-    .navBar__cntlupita, .navBar__hamburger {
-        padding-top: 20px;
     }
 
     /*pageEnd*/
@@ -1554,11 +1541,6 @@ ol li::marker {
     .navBar__menu {
         margin-top: 91px;
     }
-    
-    .navBar__cntlupita, .navBar__hamburger {
-        padding-top: 25px;
-    }
-
     /*pageEnd*/
     .pageEnd__form--input, .pageEnd__form--button {
         height: 50px;

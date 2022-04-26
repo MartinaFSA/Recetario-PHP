@@ -38,7 +38,7 @@
 
         <section>
             <p class="texto_indicaciones">Las siguientes recetas no contienen trigo, avena, centeno ni cebada.</p>
-            <p class="texto_indicaciones">TIP: Si te gusta alguna receta que contenga TACC, probá reemplazarlos con harina de garbanzos, harina de almendras, harina de arroz, almidón de maíz, etc.</p>
+            <p class="texto_indicaciones">TIP: Si te gusta alguna receta que contenga TACC, probá reemplazarlos con <a href="tips/recetas_sinTACC.php">estos ingredientes</a>.</p>
         </section>
 
         <!--CARDS-->
@@ -60,7 +60,7 @@
     
                             <form action='' method='POST' class='card__receta col-sm-12 col-md-6 col-lg-6 col-xl-3'>
 
-                                <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/<?php echo $recetaEncontrada['imagen__receta']?>')">
+                                <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/CardsRecetas/<?php echo $recetaEncontrada['imagen__receta']?>')">
 
                                 <a href='<?php echo $recetaEncontrada['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button botonVerde textoBlanco textoChico flexAndCenter' value='VER RECETA'></a>
                                 

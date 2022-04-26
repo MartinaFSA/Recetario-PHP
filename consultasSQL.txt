@@ -1,0 +1,35 @@
+//CREAR BD
+    CREATE DATABASE IF NOT EXISTS recetario;
+
+//CREAR TABLAS 
+    CREATE TABLE usuarios
+        (mail VARCHAR (255) NOT NULL PRIMARY KEY,
+        contraseña VARCHAR (255) NOT NULL
+        );
+    
+    CREATE TABLE recetas
+        (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        nombre__receta VARCHAR (27) NOT NULL,
+        info__receta VARCHAR (255),
+        imagen__receta VARCHAR (50),
+        link__receta VARCHAR (255)
+        );
+
+//CREAR RECETAS    
+    SELECT * FROM recetas WHERE nombre__receta = 'Sopa de Cebolla'";
+
+
+##ESTO NO FUNCIONA
+SELECT CASE 
+	WHEN EXISTS(SELECT * FROM 'recetas' WHERE nombre__receta = 'Lemon Pie sin lactosa') 
+    	THEN 'Esta receta ya existe'
+	ELSE 
+        INSERT INTO 'recetas' ('id', 'nombre__receta', 'info__receta', 'imagen__receta', 'link__receta', 'ingredientes__receta') VALUES (NULL, 'Lemon Pie sin lactosa', 'Tarta de limón sin leche ni manteca', 'lemonPieSinLactosa.jpg', 'tortas_tartasDulces/lemonPieSinLactosa.php', 'huevos, yemas, claras, azúcar, harina, trigo, limón, merengue, crema pastelera, margarina, leche de almendras, maicena, almidón de maíz vegetariana sin lactosa')
+END
+##
+INSERT INTO recetas (id, nombre__receta, info__receta, imagen__receta, link__receta) values 
+('NULL','Sopa de Cebolla','Receta francesa de sopa de cebolla caramelizada.','sopaCebolla.jpg','sopas_guisos/sopaCebolla.php');
+('NULL','Pionono','Masa básica de piono e ideas para rellenos dulces y salados.','pionono.jpg','tortas_tartasDulces/pionono.php');
+('NULL','Papa Rellena','Papa rellena de brócoli y salsa bechamel.','papaRellena.jpg','otrasRecetasSaladas/papaRellena.php');
+('NULL','Suprema Maryland','Suprema con puré, humita, morrón horneado, jamón y banana frita.','milanesaMaryland.jpg','otrasRecetasSaladas/milanesaMaryland.php');
+(NULL, 'Lemon Pie sin lactosa', 'Tarta de limón sin leche ni manteca', 'lemonPieSinLactosa.jpg', 'tortas_tartasDulces/lemonPieSinLactosa.php', 'huevos, yemas, claras, azúcar, harina, trigo, limón, merengue, crema pastelera, margarina, leche de almendras, maicena, almidón de maíz vegetariana sin lactosa');

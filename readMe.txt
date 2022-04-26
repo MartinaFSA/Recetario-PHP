@@ -3,7 +3,8 @@ Indicaciones para agregar recetas:
 
         "INSERT INTO 'recetas' ('nombre_receta', 'imagen_receta', 'info_card', 'link_receta', 'id__receta', 'ingredientes__receta') VALUES ('$nombre__receta', '$imagen__receta','$info__card', '$link__receta', '$id__receta', '$ingredientes__receta') ";
 
-    NOTA: Los ingredientes pueden ir con o sin tildes, van en plural y, si corresponde, hay que aclarar si contiene trigo, avena, cebada, centeno.
+    NOTA: Los ingredientes pueden ir con o sin tildes, van en plural y, si corresponde, hay que aclarar si contiene trigo, avena, cebada, centeno. 
+    En los ingredientes de la BD también hay que esribir "vegana", "vegetariana", "bebida" o "pan" si coresponde. (Esto se hace para la búsqueda en SQL)
 
     2 - En info_recetas.php hay que crear el objeto 
 

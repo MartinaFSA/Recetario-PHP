@@ -6,7 +6,7 @@
         </div>
 
         <div class="pageEnd__form">
-            <form action="../componentes/newsletter.php" method="POST">
+            <form action="componentes/newsletter.php" method="POST">
                 <input type="email" name="mailNewsletter" placeholder="mariano@example.com" class="pageEnd__form--input textoChico">
                 <input type="submit" name="pageEnd__form--button" class="pageEnd__form--button textoChico" value="Suscribirme">
             </form>

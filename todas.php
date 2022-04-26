@@ -48,7 +48,7 @@
 
                         <form action='' method='post' class='card__receta col-sm-12 col-md-6 col-lg-6 col-xl-3'>
 
-                            <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/<?php echo $recetaArray['imagen__receta']?>')">
+                            <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/CardsRecetas/<?php echo $recetaArray['imagen__receta']?>')">
 
                             <a href='<?php echo $recetaArray['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button botonVerde textoBlanco flexAndCenter' value='VER RECETA'></a>
                             

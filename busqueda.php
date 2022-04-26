@@ -50,7 +50,7 @@
                                         <h1 class='textoTitulos'>No se han encontrado recetas para '" . $busqueda . "'. Pruebe usando otra palabra.</h1> 
                                         </div>
                                         <div class='ctnButton'>
-                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoTitulos'>Más recetas</a></button>
+                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoChico'>Más recetas</a></button>
                                         </div>
                                     </section>
                                     "
@@ -63,7 +63,7 @@
                                         <h1 class='textoTitulos'><h1 class='textoTitulos'>Resultados para '" . $busqueda . "'</h1> 
                                         </div>
                                         <div class='ctnButton'>
-                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoTitulos'>Más recetas</a></button>
+                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoChico'>Más recetas</a></button>
                                         </div>
                                     </section>
                                     "
@@ -116,7 +116,7 @@
                                         <h1 class='textoTitulos'>No se han encontrado recetas con '" . $busqueda . "'</h1> 
                                         </div>
                                         <div class='ctnButton'>
-                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoTitulos'>Más recetas</a></button>
+                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoChico'>Más recetas</a></button>
                                         </div>
                                     </section>
                                     "
@@ -129,7 +129,7 @@
                                         <h1 class='textoTitulos'><h1 class='textoTitulos'>Resultados para recetas con '" . $busqueda . "'</h1> 
                                         </div>
                                         <div class='ctnButton'>
-                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoTitulos'>Más recetas</a></button>
+                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoChico'>Más recetas</a></button>
                                         </div>
                                     </section>
                                     "
@@ -181,7 +181,7 @@
                                             <h1 class='textoTitulos'>No se han encontrado recetas con '" . $busqueda . "'</h1> 
                                             </div>
                                             <div class='ctnButton'>
-                                                <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoTitulos'>Más recetas</a></button>
+                                                <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoChico'>Más recetas</a></button>
                                             </div>
                                         </section>
                                         "
@@ -194,7 +194,7 @@
                                             <h1 class='textoTitulos'><h1 class='textoTitulos'>Resultados para recetas con '" . $busqueda . "'</h1> 
                                             </div>
                                             <div class='ctnButton'>
-                                                <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoTitulos'>Más recetas</a></button>
+                                                <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoChico'>Más recetas</a></button>
                                             </div>
                                         </section>
                                         "
@@ -246,7 +246,7 @@
                                         <h1 class='textoTitulos'>No se han encontrado recetas sin '" . $busqueda . "'</h1> 
                                         </div>
                                         <div class='ctnButton'>
-                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoTitulos'>Más recetas</a></button>
+                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoChico'>Más recetas</a></button>
                                         </div>
                                     </section>
                                     "
@@ -259,7 +259,7 @@
                                         <h1 class='textoTitulos'><h1 class='textoTitulos'>Resultados para recetas sin '" . $busqueda . "'</h1> 
                                         </div>
                                         <div class='ctnButton'>
-                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoTitulos'>Más recetas</a></button>
+                                            <button class='encabezado_section__button'><a href='todas.php' class='encabezadoSection__button--link textoChico'>Más recetas</a></button>
                                         </div>
                                     </section>
                                     "
@@ -296,7 +296,7 @@
                             } 
 
                         } else {
-                            header("Refresh: 0.1; url = index.php");
+                            $olasDelMar = 2+2;
                         }
                     ?>
                     

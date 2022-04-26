@@ -12,7 +12,7 @@
             require("componentes/head.php");
         ?>
     
-        <title>Recetario - Recetas sin lácteos</title>
+        <title>Recetario - Recetas vegetarianas</title>
         <link rel = "icon" href = "imagenes/faviconRecetario.ico">
     </head>
     
@@ -29,16 +29,16 @@
         <!--SECCIÓN RECETAS-->
         <section class="encabezado_section">
             <div class="ctnEncabezado">
-                <h1 class="textoTitulos">Recetas sin lácteos</h1>
+                <h1 class="textoTitulos">Recetas vegetarianas</h1>
             </div>
             <div class="ctnButton">
                 <button class="encabezado_section__button"><a href="todas.php" class="encabezadoSection__button--link textoChico">Más recetas</a></button>
             </div>
         </section>
-        
+
         <section>
-            <p class="texto_indicaciones">Las siguientes recetas no contienen derivados de leche.</p>
-            <p class="texto_indicaciones">TIP: Si te gusta alguna receta que contenga lácteos, probá reemplazarlos con <a href="tips/recetas_sinLacteos.php">estos ingredientes</a>.</p></p>
+            <p class="texto_indicaciones">Las siguientes recetas no contienen carne.</p>
+            <p class="texto_indicaciones">TIP: Si te gusta alguna receta que contenga carne, probá reemplazarla con <a href="tips/recetas_vegetarianas.php">estos ingredientes</a>.</p>
         </section>
 
         <!--CARDS-->
@@ -48,12 +48,9 @@
                     <?php
                         $conexion = mysqli_connect(SERVIDOR, USUARIO, CONTRASEÑA, BASEDATOS);
 
-                        $sql = mysqli_query($conexion, 
-                            "SELECT * FROM recetas WHERE ingredientes__receta NOT LIKE '%lacteos%'
-                            AND ingredientes__receta NOT LIKE '%queso%'
-                            AND ingredientes__receta NOT LIKE '%leche%'
-                            AND ingredientes__receta NOT LIKE '%manteca%'
-                            AND ingredientes__receta NOT LIKE '%crema de leche%'"
+                        $sql = mysqli_query($conexion,
+                            "SELECT * FROM recetas WHERE ingredientes__receta LIKE '%vegetariana%'
+                            OR ingredientes__receta LIKE '%vegetarianas%'"
                         );
 
                         while ($recetaEncontrada = mysqli_fetch_assoc($sql)) {
@@ -63,14 +60,14 @@
 
                                 <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/CardsRecetas/<?php echo $recetaEncontrada['imagen__receta']?>')">
 
-                                <a href='<?php echo $recetaEncontrada['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button botonVerde textoBlanco flexAndCenter' value='VER RECETA'></a>
+                                <a href='<?php echo $recetaEncontrada['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button botonVerde textoBlanco textoChico flexAndCenter' value='VER RECETA'></a>
                                 
                                 <input type='hidden' name='recetalink' id='recetalink' value='<?php echo $recetaEncontrada['link__receta'] ?>'>
                                 <input type='hidden' name='imagenReceta' id='imagenReceta' value='<?php echo $recetaEncontrada['imagen__receta'] ?>'>
 
                                 <div class='card__receta--info'>
-                                    <input type='text' name='recetaname' id='recetaname' value='<?php echo $recetaEncontrada['nombre__receta'] ?>'> 
-                                    <input type='text' name='recetainfo' id='recetainfo' value='<?php echo $recetaEncontrada['info__receta']?>'>
+                                    <input type='text' name='recetaname' id='recetaname' class="textoChico" value='<?php echo $recetaEncontrada['nombre__receta'] ?>'> 
+                                    <input type='text' name='recetainfo' id='recetainfo' class="textoChico" value='<?php echo $recetaEncontrada['info__receta']?>'>
                                 </div>
                                 
                                 <button name='botonControlador' value='guardar' type='submit' class='card__receta--buttonGuardarIndex modal__inicieSesion--button botonGuardarNoActive' id='<?php echo str_replace(' ', '', $recetaEncontrada['nombre__receta'])?>'> </button>

@@ -122,7 +122,7 @@
                     
                     <div id="recursosReceta">
                         <div>
-                            <img src="../imagenes/<?php echo $sopaCebolla -> imagenRecetaEscrita?>" alt="Esta es una foto de la receta">
+                            <img src="../imagenes/RecetaEscrita/<?php echo $sopaCebolla -> imagenRecetaEscrita?>" alt="Esta es una foto de la receta">
                         </div>
 
                         <div class="recursosReceta__notas">

@@ -39,9 +39,12 @@
     //Milanesa Maryland Suprema Maryland
     $milanesaMaryland = new Receta ("Milanesa", "Maryland", "1 horas", " horas", "recetaEscrita_milanesaMaryland.jpg");
 
-    //Pionono Arrollado
+    //Pionono / Arrollado
     $pionono = new Receta ("Pionono", "Masa Básica", "20 minutos", "10 minutos", "recetaEscrita_pionono.jpg");
 
     //Papa Rellena
     $papaRellena = new Receta ("Papa", "Rellena", "20 minutos", "2 horas", "recetaEscrita_papaRellena.jpg");
+
+    //Lemon Pie / Tarta de limón
+    $lemonPie = new Receta ("Lemon", "Pie", "50 minutos", "20 minutos", "recetaEscrita_lemonPie.jpg");
 ?>

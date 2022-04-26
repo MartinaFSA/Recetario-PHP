@@ -57,7 +57,10 @@
             <div class="ctn_cards container-fluid">
                 <div class="cards__recetas textoChico row">
                     <?php
-                        $sentencia = $pdo -> prepare("SELECT * FROM recetas WHERE nombre__receta LIKE 'Sopa de cebolla' OR nombre__receta LIKE 'Suprema Maryland'"); //Traigo 4 recetas de la tabla. OR nombre__receta LIKE 'Suprema Maryland' OR nombre__receta LIKE 'Suprema Maryland'
+                        $sentencia = $pdo -> prepare("SELECT * FROM recetas WHERE nombre__receta LIKE 'Sopa de cebolla'
+                        OR nombre__receta LIKE 'Suprema Maryland'
+                        OR nombre__receta LIKE 'Lemon Pie tradicional'
+                        "); //Traigo 4 recetas de la tabla. OR nombre__receta LIKE 'Suprema Maryland' OR nombre__receta LIKE 'Suprema Maryland'
                         $sentencia -> execute(); //Ejecuto la sentencia de arriba
                         $allRecetas = $sentencia -> fetchAll(PDO::FETCH_ASSOC);
 
@@ -68,7 +71,7 @@
 
                         <form action='' method='post' class='card__receta col-sm-12 col-md-6 col-lg-6 col-xl-3'>
 
-                            <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/<?php echo $recetaArray['imagen__receta']?>')">
+                            <input type='text' name='imagenSReceta' id='imagenSReceta' class='imgReceta' alt='Foto del platillo' style="background-image: url('imagenes/CardsRecetas/<?php echo $recetaArray['imagen__receta']?>')">
 
                             <a href='<?php echo $recetaArray['link__receta'] ?>'><input type='text' name='recetaSlink' id='recetaSlink' class='card__receta--button botonVerde textoBlanco flexAndCenter textoChico' value='VER RECETA'></a>
                             

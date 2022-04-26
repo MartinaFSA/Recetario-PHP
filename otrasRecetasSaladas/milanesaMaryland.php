@@ -205,7 +205,7 @@ Para la presentación: servir las supremas. Encima de cada una, colocar 1 trozo 
                     
                     <div id="recursosReceta">
                         <div>
-                            <img src="../imagenes/<?php echo $milanesaMaryland -> imagenRecetaEscrita?>" alt="Esta es una foto de la receta">
+                            <img src="../imagenes/RecetaEscrita/<?php echo $milanesaMaryland -> imagenRecetaEscrita?>" alt="Esta es una foto de la receta">
                         </div>
 
                         <div class="recursosReceta__notas">

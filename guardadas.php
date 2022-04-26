@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="ctnButton">
-                    <button class="encabezado_section__button"><a href="todas.php" class="encabezadoSection__button--link textoTitulos textoChico">Más recetas</a></button>
+                    <button class="encabezado_section__button"><a href="todas.php" class="encabezadoSection__button--link textoChico">Más recetas</a></button>
                 </div>
             </section>
             
@@ -47,10 +47,10 @@
                         ?>
                             <div action='' class='card__receta col-sm-12 col-md-6 col-lg-6 col-xl-3'>
                             
-                                <img src='imagenes/<?php echo $recetaArray['ImagenReceta'] ?>' alt='Foto del platillo' width='300px' height='250px' class='card__receta--img'>
+                                <img src='imagenes/CardsRecetas/<?php echo $recetaArray['ImagenReceta'] ?>' alt='Foto del platillo' width='300px' height='250px' class='card__receta--img'>
 
-                                <a href='"<?php echo $recetaArray['LinkReceta']?>"'> 
-                                    <div class='card__receta--button'> 
+                                <a href='<?php echo $recetaArray['LinkReceta']?>'> 
+                                    <div class='card__receta--button botonVerde textoBlanco flexAndCenter textoChico'> 
                                         <p>VER RECETA</p>
                                     </div>
                                 </a>

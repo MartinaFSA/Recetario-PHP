@@ -91,10 +91,10 @@
                         echo "
                             <section id='modal__inicieSesion'>
                                         <div id='modal__content'>
-                                            <header id='modal__header'>
+                                            <div id='modal__header'>
                                                 <p id='modalTitle' class='textoMediano'>Inicie sesión</p>
                                                 <button id='close-modal' class='textoMediano'> ✕ </button>
-                                            </header>
+                                            </div>
                 
                                             <div id='modal__body'>
                                                 <div id='modal__body--form'>
