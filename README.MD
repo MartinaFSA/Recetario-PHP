@@ -1,4 +1,4 @@
-#  Recetario web
+# Recetario web
 
 ### Tecnologías utilizadas :wrench:
 * [PHP](https://www.php.net/manual/es/intro-whatis.php) - Lenguaje de programación
